@@ -1,8 +1,10 @@
 const fs = require('fs');
 const express = require('express');
-const cors=require('cors')
+const cors = require('cors')
 const app = express();
+
 app.use(cors())
+
 app.get('/', (req, res) => {
   const content = 'x'.repeat(1024 * 1024); // create 1MB content
   const fileName = 'sample.txt';
